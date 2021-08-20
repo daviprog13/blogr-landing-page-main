@@ -1,0 +1,84 @@
+.infrastructure-mobile {
+    display: none;
+}
+
+.infrastructure {
+    width: 100%;
+    margin: 60px 0;
+}
+
+.backgroundColor {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    position: relative;
+    background: linear-gradient(to right, #2A2B3D, #383955);
+    overflow: hidden;
+    border-radius: 0 80px 0 80px;
+}
+
+.backgroundColor .description-2 {
+    width: 667px;
+    justify-content: flex-end;
+    padding: 100px;
+}
+
+.infrastructure img {
+    position: absolute;
+    top: 1480px;
+    left: 80px;
+    z-index: 10;
+}
+
+.backgroundColor::before {
+    content: url(/img/bg-pattern-circles.svg);
+    display: block;
+    position: absolute;
+    top: -130%;
+    right: 500px;
+}
+
+.description-2 h1 {
+    color: var(--White);
+    font-size: 34px;
+    padding-bottom: 20px;
+}
+
+.description-2 p {
+    color: var(--White);
+    line-height: 2rem;
+    font-family: var(--fontUbuntu);
+    font-weight: 100;
+}
+
+@media(max-width:700px) {
+    .infrastructure {
+        display: none;
+    }
+    .infrastructure-mobile {
+        display: block;
+        position: relative;
+    }
+    .infrastructure-mobile img {
+        position: absolute;
+        z-index: 5;
+        top: -300px;
+    }
+    .backgroundColor::before {
+        top: -450px;
+        left: -250px;
+    }
+    .description-2 {
+        text-align: center;
+        z-index: 1;
+        margin-top: 150px;
+        font-size: 16px;
+    }
+    .description-2 h1 {
+        font-size: 40px;
+    }
+    .description-2 p {
+        width: 350px;
+        margin: 0 auto;
+    }
+}

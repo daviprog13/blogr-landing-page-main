@@ -1,0 +1,42 @@
+@import 'header.css';
+@import 'design-future.css';
+@import 'infrastructure.css';
+@import 'simple.css';
+@import 'footer.css';
+@import 'menu-mobile.css';
+:root {
+    --LightRed: #FF525D;
+    --Very-lightRed: #FF7A85;
+    --VeryDarkBlue: #1F3F5B;
+    --White: #ffff;
+    --Grayishblue: #C8C8CB;
+    --Verydarkgrayishblue: #4B5862;
+    --Verydarkblackblue: #25252D;
+    /* Background gradient - Intro/CTA mobile nav: */
+    --VeryLightRed: #FF8F70;
+    --LightRed: #FF3D54;
+    /* Background gradient - body: */
+    --VeryDarkGrayBlue: #2C2D3F;
+    --VeryDarkDesaturatedBlue: #3F4164;
+    --fontOverpass: 'Overpass', sans-serif;
+    --fontUbuntu: 'Ubuntu', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    font-family: var(--fontOverpass);
+    font-size: 16px;
+}

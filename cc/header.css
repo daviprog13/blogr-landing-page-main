@@ -1,0 +1,412 @@
+.intro {
+    width: 100%;
+    background: url(/img/bg-pattern-intro.svg), linear-gradient(to right, var(--VeryLightRed), var(--LightRed));
+    background-size: 2750px, 100%;
+    background-position-y: -1150px, 0;
+    background-position-x: -340px, 0;
+    background-repeat: no-repeat;
+    border-radius: 0 0 0 100px;
+}
+
+.navigator {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 120px;
+}
+
+.nav-1,
+.nav-2 {
+    display: flex;
+    align-items: center;
+}
+
+.nav-1 ul,
+.nav-2 ul {
+    display: flex;
+    z-index: 1;
+}
+
+.nav-1 ul li,
+.nav-2 ul li {
+    padding: 0 10px;
+}
+
+.nav-1 ul li a,
+.nav-2 ul li a {
+    color: var(--White);
+    padding: 17px;
+    font-family: var(--fontUbuntu);
+    font-weight: 500;
+}
+
+.nav-1 ul li a::after {
+    content: url(/img/icon-arrow-light.svg);
+    color: var(--White);
+    font-weight: 500;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+
+/*  */
+
+.nav-1 ul li a:hover {
+    text-decoration-line: underline;
+    text-decoration-thickness: 2px;
+}
+
+.nav-2 ul li:last-child a {
+    background-color: var(--White);
+    border-radius: 30px;
+    color: var(--LightRed);
+    padding: 17px 30px;
+    transition: .3s ease-in-out;
+}
+
+.nav-2 ul li:last-child a:hover {
+    background-color: var(--Very-lightRed);
+    color: var(--White);
+}
+
+.nav-1 img {
+    margin-right: 20px;
+}
+
+.nav-2 img {
+    display: none;
+}
+
+.apresentation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 30vh;
+    color: var(--White);
+    z-index: 10;
+    padding: 50px;
+}
+
+.apresentation h1 {
+    font-weight: 600;
+    letter-spacing: .1rem;
+    font-size: 45px;
+}
+
+.apresentation p {
+    padding-top: 15px;
+    padding-bottom: 30px;
+    font-weight: 300;
+}
+
+.imgpatern-intro {
+    position: absolute;
+    top: 0;
+    z-index: -10;
+}
+
+.btn {
+    display: flex;
+    flex-direction: row;
+}
+
+.btn-1,
+.btn-2 {
+    margin: 10px;
+    font-family: var(--fontUbuntu);
+    padding-bottom: 100px;
+}
+
+.btn-1 a {
+    padding: 16px 20px;
+    border-radius: 50px;
+    background: var(--White);
+    color: var(--LightRed);
+    font-weight: 700;
+    transition: .3s ease-in-out;
+}
+
+.btn-1 a:hover {
+    background-color: var(--Very-lightRed);
+    color: var(--White);
+}
+
+.btn-2 a {
+    padding: 16px 20px;
+    border-radius: 50px;
+    font-weight: 700;
+    background-color: transparent;
+    color: var(--White);
+    border: 1px solid var(--White);
+}
+
+.btn-2 a:hover {
+    background: var(--White);
+    color: var(--LightRed);
+    transition: .3s ease-in-out;
+}
+
+
+/* dropdown */
+
+
+/* product */
+
+[data-products] {
+    position: relative;
+}
+
+.nav-1 .list-product {
+    position: absolute;
+    top: 25px;
+    display: none;
+    flex-direction: column;
+    background-color: var(--White);
+    width: 135px;
+    padding: 15px 0;
+    animation: showRight .3s ease-in-out;
+}
+
+.navigator .nav-1 [data-products].active .list-product {
+    display: flex;
+}
+
+.nav-1 [data-products].active a:first-child::after {
+    content: '^';
+    animation: .3s ease-in-out;
+}
+
+.list-product li {
+    display: block;
+    margin: 10px 0;
+}
+
+.nav-1 .list-product li a {
+    color: #000;
+    font-weight: 100;
+}
+
+.nav-1 .list-product li a:hover {
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.nav-1 .list-product li a::after {
+    display: none;
+}
+
+
+/* sobre */
+
+[data-company] {
+    position: relative;
+}
+
+.nav-1 .list-company {
+    position: absolute;
+    top: 25px;
+    display: none;
+    flex-direction: column;
+    background-color: var(--White);
+    width: 135px;
+    padding: 15px 0;
+    animation: showRight .3s ease-in-out;
+}
+
+.nav-1 [data-company].active .list-company {
+    display: flex;
+}
+
+.nav-1 [data-products].active a:first-child::after {
+    content: '^';
+    animation: .3s ease-in-out;
+}
+
+.list-company li {
+    display: block;
+    margin: 10px 0;
+}
+
+.nav-1 .list-company li a {
+    color: #000;
+    font-weight: 100;
+}
+
+.nav-1 .list-company li a:hover {
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.nav-1 .list-company li a::after {
+    display: none;
+}
+
+
+/* connect */
+
+[data-conect] {
+    position: relative;
+}
+
+.nav-1 .list-conect {
+    position: absolute;
+    top: 25px;
+    display: none;
+    flex-direction: column;
+    background-color: var(--White);
+    width: 135px;
+    padding: 15px 0;
+    animation: showRight .3s ease-in-out;
+}
+
+.nav-1 [data-conect].active .list-conect {
+    display: flex;
+}
+
+.nav-1 [data-company].active a:first-child::after {
+    content: '^';
+    animation: .3s ease-in-out;
+}
+
+.nav-1 [data-conect].active a:first-child::after {
+    content: '^';
+    animation: .3s ease-in-out;
+}
+
+.list-conect li {
+    display: block;
+    margin: 10px 0;
+}
+
+.nav-1 .list-conect li a {
+    color: #000;
+    font-weight: 100;
+}
+
+.nav-1 .list-conect li a:hover {
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.nav-1 .list-conect li a::after {
+    display: none;
+}
+
+@keyframes showRight {
+    from {
+        opacity: 0;
+        transform: translate3d(-30px, 0, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+
+/* Login */
+
+.container-login {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    background-color: rgba(0, 0, 0, .4);
+}
+
+.container-login.active {
+    display: flex;
+}
+
+.login {
+    background-color: #FFC6B6;
+    padding: 40px;
+    border-radius: 30px;
+    border: 15px solid var(--LightRed);
+    box-shadow: 0 0 0 20px var(--White), 0 0 0 28px rgba(255, 255, 255, .5);
+    position: relative;
+}
+
+.loginStyle {
+    margin: 15px 0;
+}
+
+.container-login .login .loginStyle label {
+    display: block;
+    margin-bottom: 9px;
+    font-family: var(--fontUbuntu);
+    font-weight: 500;
+}
+
+.container-login .login .loginStyle input {
+    border-radius: 5px;
+    padding: 10px;
+    display: block;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-family: var(--fontUbuntu);
+    font-weight: 400;
+}
+
+.container-login .login p {
+    font-family: var(--fontUbuntu);
+    font-weight: 400;
+}
+
+.container-login .login a {
+    font-family: var(--fontUbuntu);
+    color: var(--VeryDarkDesaturatedBlue);
+    font-weight: 700;
+    transition: .3s ease-in-out;
+}
+
+.container-login .login a:hover {
+    color: var(--LightRed);
+}
+
+.btn-login {
+    padding: 5px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    background-color: var(--LightRed);
+    color: var(--White);
+    border: 5px solid var(--White);
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+@media(max-width:700px) {
+    [data-products],
+    [data-company],
+    [data-conect] {
+        display: none;
+    }
+    .apresentation h1 {
+        text-align: center;
+    }
+    .apresentation p {
+        text-align: center;
+        max-width: 250px;
+    }
+    .nav-2 ul {
+        display: none;
+    }
+    .nav-2 img {
+        display: block;
+        cursor: pointer;
+    }
+    .intro {
+        background-size: 3000px, 100%;
+        background-position-y: -1100px, 0;
+        background-position-x: -940px, 0;
+    }
+}
